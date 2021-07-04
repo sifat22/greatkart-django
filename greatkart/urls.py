@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.index,name='index'),
     path("store/",include('store.urls')),
+    path('cart/',include('cart.urls')),
 ]
 
 urlpatterns+=staticfiles_urlpatterns()
