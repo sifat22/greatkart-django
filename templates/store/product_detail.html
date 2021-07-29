@@ -36,22 +36,23 @@
     
     
     <hr>
+   
+   
         <div class="row">
             <div class="item-option-select">
                 <h6>Choose Color</h6>
                <select name="color" class="form-control" required>
                  <option value="" disabled selected>Choose color</option>
-
-
                  <!--from variation manager in model-->
-
-
                  {% for i in single_product.variation_set.colors %}
                  <option value="{{i.variation_value|lower}}">{{i.variation_value | capfirst}}</option>
                  {% endfor %}
                </select> 
             </div>
         </div> <!-- row.// -->
+      
+        
+        
        <div class="row">
             <div class="item-option-select">
                 <h6>Select Size</h6>
@@ -68,6 +69,7 @@
                 </select> 
             </div>
         </div> <!-- row.// -->
+       
         <hr>
         {% if single_product.stock <= 0 %}
             <h4>out of stock</h4>
